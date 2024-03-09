@@ -1,0 +1,90 @@
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.ripple:hover {
+    background: rgba(255, 0, 0, 0.8) radial-gradient(circle, transparent 1%, rgba(255, 0, 0, 0.8) 1%) center/15000%;
+}
+
+.ripple:active {
+    background-color: rgba(255, 0, 0, 0.7);
+    background-size: 100%;
+    transition: background 0s;
+}
+
+.button-ripple {
+    border: none;
+    border-radius: 29px;
+    padding: 12px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(255, 0, 0, 1);
+    outline: none;
+}
+
+.container {
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 10vw 0px 10vw;
+
+    @media (max-width: 576px) {
+        flex-direction: column-reverse;
+
+        &>:nth-child(1) {
+            order: 1;
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            margin: 5vh 0vh;
+            width: 100% !important;
+
+            div:last-child {
+                p:first-child {
+                    text-align: right !important;
+                }
+            }
+        }
+
+        &>:nth-child(2) {
+            order: 2;
+            width: 100% !important;
+        }
+
+        &>:nth-child(3) {
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            width: 100% !important;
+
+            div:first-child {
+                p:first-child {
+                    text-align: left !important;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 576px) {
+        flex-direction: row;
+    }
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    @media (min-width: 992px) {
+        flex-direction: row;
+    }
+
+    @media (min-width: 1200px) {
+        flex-direction: row;
+    }
+
+    @media (min-width: 1400px) {
+        flex-direction: row;
+    }
+}
