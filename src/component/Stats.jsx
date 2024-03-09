@@ -14,4 +14,4 @@ const Stats = ({ title, desc, align = "left", mode }) => {
     )
 }
 
-export default Stats
+export default Stats;
