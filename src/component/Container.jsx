@@ -1,8 +1,14 @@
-import React from "react"
+import React from "react";
 
-const Container = ({ children }) => {
+const Container = ({ children, mode }) => {
     return (
-        <div className="container"> {children}</div >
+        <div
+            style={{
+                backgroundColor: mode ? "#D9D9D9" : "#262626"
+            }}
+            className="container">
+            {children}
+        </div >
     )
 }
 
